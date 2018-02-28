@@ -1,13 +1,8 @@
-const routes = {
-  '/': Home,
-  '/hufflepuff': Hufflepuff,
-  '/slytherin': Slytherin,
-  '/ravenclaw': Ravenclaw,
-  '/gryffindor': Gryffindor
-}
+import router from './router'
 
 var app = new Vue({
   el: '#app',
+  router,
   data: {
     house: '',
     currentRoute: '',
