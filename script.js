@@ -1,7 +1,16 @@
+const routes = {
+  '/': Home,
+  '/hufflepuff': Hufflepuff,
+  '/slytherin': Slytherin,
+  '/ravenclaw': Ravenclaw,
+  '/gryffindor': Gryffindor
+}
+
 var app = new Vue({
   el: '#app',
   data: {
     house: '',
+    currentRoute: '',
   },
   computed: {
    houseList: function() {
@@ -24,6 +33,7 @@ var app = new Vue({
       this.house = this.getRandom(0, 3);
       switch(house) {
         case "Hufflepuff":
+          this.currentRoute = routes.Hufflepuff;
           break;
         case "Slytherin":
           break;
