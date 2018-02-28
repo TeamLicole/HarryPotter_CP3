@@ -1,7 +1,11 @@
+import router from './router'
+
 var app = new Vue({
   el: '#app',
+  router,
   data: {
     house: '',
+    currentRoute: '',
   },
   computed: {
    houseList: function() {
@@ -24,6 +28,7 @@ var app = new Vue({
       this.house = this.getRandom(0, 3);
       switch(house) {
         case "Hufflepuff":
+          this.currentRoute = routes.Hufflepuff;
           break;
         case "Slytherin":
           break;
